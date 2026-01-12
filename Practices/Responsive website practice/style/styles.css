@@ -25,7 +25,7 @@
 
 #banner {
     position: relative;
-    min-height: 80vh;
+    min-height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,7 +64,7 @@
     margin: 20px auto 0;
 }
 
-#banner .donate-btn {
+.donate-btn {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -75,7 +75,7 @@
     padding: 18px 22px;
     border: none;
     border-radius: 6px;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
     color: white;
     cursor: pointer;
@@ -84,20 +84,115 @@
         box-shadow 0.25s ease;
 }
 
-#banner .donate-btn:hover {
+.donate-btn:hover {
     background-color: #af2828;
     /* hover color */
     transform: translateY(-4px) scale(1.03);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
 }
 
-#banner .donate-btn:active {
+.donate-btn:active {
     background-color: #8f1f1f;
     /* pressed color */
     transform: translateY(0) scale(0.97);
     box-shadow: none;
 }
 
+
+#donate {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: #fff;
+    font-family: "Inter", sans-serif;
+}
+
+/* Heading + paragraph */
+.donate-today h2 {
+    font-size: 45px;
+    margin-bottom: 16px;
+    color: #111;
+    margin-bottom: 20px;
+}
+
+.donate-today p {
+    font-size: 18px;
+    color: #777;
+    max-width: 600px;
+    margin: 0 auto 48px;
+    line-height: 28px;
+}
+
+/* Taka cards */
+.tk-list {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.cards {
+    width: 120px;
+    height: 110px;
+    background-color: #ede9e9;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    border: 2px solid transparent; /* default border */
+    padding: 25px 45px;
+    gap: 22px;
+}
+
+.cards p {
+    font-size: 30px;
+    font-weight: 600;
+    color: #777;
+    transition: all 0.25s ease;
+}
+
+/* Active card */
+.cards.active {
+    background-color: #eee5e5;
+    border: 2px solid #ff5959;
+}
+
+.cards.active p {
+    color: #ff5959;
+}
+
+/* Hover effect */
+.cards:hover {
+    background-color: #fff5f5;
+    border: 2px solid #ff5959;
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.cards:hover p {
+    color: #ff5959;
+}
+
+
+/* Other amount */
+.other-amount p {
+    font-size: 15px;
+    color: #aaa;
+    margin: 60px 0 24px;
+    position: relative;
+}
+
+.other-amount p::after {
+    content: "";
+    display: block;
+    width: 500px;
+    max-width: 90%;
+    height: 1px;
+    background-color: #e5e5e5;
+    margin: 12px auto 0;
+}
 
 
 
@@ -158,5 +253,19 @@
         font-size: 15px;
         width: 100%;
         max-width: 240px;
+    }
+
+
+    .donate-today h2 {
+        font-size: 32px;
+    }
+
+    .cards {
+        width: 100px;
+        height: 90px;
+    }
+
+    .cards p {
+        font-size: 18px;
     }
 }
