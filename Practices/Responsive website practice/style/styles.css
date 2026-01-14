@@ -212,7 +212,7 @@
 
 
 #plan {
-    padding: 100px 20px;
+    padding: 80px 20px;
     text-align: center;
     background-color: #fff;
 }
@@ -349,6 +349,80 @@
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
+#update {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.get-update-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+}
+
+.update-text h2 {
+    margin-top: 130px;
+    font-size: 45px;
+    margin-bottom: 25px;
+}
+
+.update-text p {
+    font-size: 18px;
+    line-height: 28px;
+    color: #707070;
+    max-width: 550px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.subscribe {
+    margin: 50px auto 130px;
+    padding: 76px 190px;
+    background-color: #FFF4D6;
+}
+
+.subscribe form {
+    display: flex;
+    gap: none;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.subscribe .email {
+    padding: 12px 15px;
+    font-size: 18px;
+    border-radius: 6px 0 0 6px;
+    flex: 1 1 250px;
+    width: 450px;
+    height: 55px;
+    background-color: #D9D9D9;
+    border: none;
+
+}
+
+.subscribe .subs-btn {
+    padding: 12px 35px;
+    font-size: 16px;
+    border: none;
+    font-weight: 600;
+    background-color: #FF5959;
+    /* Accent color */
+    color: #fff;
+    border-radius: 0 6px 6px 0px;
+    cursor: pointer;
+
+    transition: background-color 0.25s ease, transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.subscribe .subs-btn:hover {
+    background-color: #bf2e2e;
+    /* hover color */
+    transform: translateY(-2px) scale(1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+}
+
 
 
 
@@ -417,7 +491,7 @@
     }
 
 
-.donation-section {
+    .donation-section {
         margin: 60px 40px;
     }
 
@@ -576,4 +650,81 @@
         padding: 14px 0;
         font-size: 16px;
     }
+
+
+
+    #update {
+        margin: 0 auto;
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    .get-update-container {
+        max-width: 100%;
+        padding: 0 15px;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* Heading */
+    .update-text h2 {
+        margin-top: 60px;
+        /* reduce top margin for mobile */
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    /* Paragraph */
+    .update-text p {
+        font-size: 16px;
+        line-height: 24px;
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    /* Subscribe box */
+    .subscribe {
+        margin: 40px auto 60px;
+        padding: 40px 20px;
+        /* reduce padding for mobile */
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Subscribe form */
+    .subscribe form {
+        display: flex;
+        flex-direction: column;
+        /* stack inputs vertically */
+        gap: 15px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    /* Email input */
+    .subscribe .email {
+        margin: 0 auto;
+        width: 80%;
+        flex: unset;
+        height: 50px;
+        border-radius: 6px;
+        padding: 12px 15px;
+        font-size: 16px;
+        background-color: #D9D9D9;
+    }
+
+    /* Subscribe button */
+    .subscribe .subs-btn {
+        margin: 0 auto;
+        width: 70%;
+        border-radius: 6px;
+        padding: 12px 0;
+        font-size: 16px;
+    }
+
+
 }
