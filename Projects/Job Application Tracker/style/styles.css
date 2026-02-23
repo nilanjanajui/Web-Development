@@ -1,0 +1,119 @@
+
+
+.geist-font {
+    font-family: "Geist", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.card {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    cursor: pointer;
+}
+
+
+.card:hover {
+    transform: translateY(-1px) scale(1.01);
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.08),
+        0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+.card button {
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.card button:hover {
+    transform: translateY(-3px);
+}
+
+
+.btn-delete:hover {
+    background-color: #f3f4f6;
+    transform: scale(1.1);
+}
+
+
+
+
+
+.card.interview {
+    background-color: #f8fdfb;
+    border-left: 4px solid #10b981;
+}
+
+.card.rejected {
+    background-color: #fef8f8;
+    border-left: 4px solid #ef4444;
+}
+
+.card.not-applied {
+    background-color: white;
+    border-left: 4px solid transparent;
+}
+
+
+#emptyState {
+    max-width: 24rem; 
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+
+
+@media (max-width: 576px) {
+    main {
+        width: 95% !important;
+        padding-bottom: 4rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+
+    .flex.gap-3 {
+        gap: 0.5rem;
+    }
+
+    .card {
+        flex-direction: row; 
+        padding: 1rem;
+        align-items: flex-start; 
+        gap: 1rem; 
+    }
+
+    .card > div:first-child {
+        flex: 1; 
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card > div:last-child {
+        margin-top: 0; 
+    }
+
+    .status {
+        margin-top: 0.5rem;
+    }
+
+    .filter-section {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .btn-delete {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
