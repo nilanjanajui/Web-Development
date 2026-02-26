@@ -78,3 +78,4 @@ TechWave is a responsive podcast website built with HTML and CSS. It features a 
 ## License
 
 This repository is intended for learning and personal development purposes.
+
