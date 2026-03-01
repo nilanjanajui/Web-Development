@@ -55,6 +55,14 @@ TechWave is a responsive podcast website built with HTML and CSS. It features a 
 **Live Demo:** [https://nilanjanajui.github.io/PH-Assignment-02-Project-TechWave/](https://nilanjanajui.github.io/PH-Assignment-02-Project-TechWave/)
 
 
+### 4. Job Application Tracker
+
+A responsive Job Tracking web application that allows users to manage and monitor job applications efficiently.
+This project demonstrates dynamic UI rendering, state management, filtering logic, and responsive design using Vanilla JavaScript.
+
+**Live Demo:** [https://nilanjanajui.github.io/Job-Application-Tracker/](https://nilanjanajui.github.io/Job-Application-Tracker/)
+
+
 
 ---
 
