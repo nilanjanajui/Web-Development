@@ -63,6 +63,13 @@ This project demonstrates dynamic UI rendering, state management, filtering logi
 **Live Demo:** [https://nilanjanajui.github.io/Job-Application-Tracker/](https://nilanjanajui.github.io/Job-Application-Tracker/)
 
 
+ ### 5. Payoo Mobile Banking Web App
+
+Payoo is a **frontend-only mobile banking simulation** built with **HTML, Tailwind CSS, DaisyUI, and vanilla JavaScript**.
+The project focuses on **core frontend fundamentals** such as state management, input validation, DOM manipulation, and clean file separation - without using any frameworks or backend services.
+
+**Live Demo:** [https://nilanjanajui.github.io/Payo-Mobile-Banking/](https://nilanjanajui.github.io/Payo-Mobile-Banking/)
+
 
 ---
 
