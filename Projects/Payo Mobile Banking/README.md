@@ -1,7 +1,9 @@
-# 📱 Payoo – Frontend Mobile Banking Web App
+# 📱 Payoo Mobile Banking Web App
 
 Payoo is a **frontend-only mobile banking simulation** built with **HTML, Tailwind CSS, DaisyUI, and vanilla JavaScript**.
-The project focuses on **core frontend fundamentals** such as state management, input validation, DOM manipulation, and clean file separation — without using any frameworks or backend services.
+The project focuses on **core frontend fundamentals** such as state management, input validation, DOM manipulation, and clean file separation - without using any frameworks or backend services.
+
+**Live Demo:** [https://nilanjanajui.github.io/Payo-Mobile-Banking/](https://nilanjanajui.github.io/Payo-Mobile-Banking/)
 
 ---
 
@@ -41,7 +43,8 @@ Payoo/
 * Add money from bank
 * Cashout to agent
 * Live balance update
-* Transaction history (in-memory)
+* Transaction history with filter and clear actions
+* Persistent balance + transactions using localStorage
 * Modular JavaScript architecture
 * Mobile-first responsive UI
 
@@ -167,31 +170,26 @@ PIN: 1234
 * DaisyUI
 * Vanilla JavaScript (ES6+)
 
-No frameworks. No backend. No shortcuts.
-
 ---
 
-## 🎯 Why This Project Is Portfolio-Ready
+## 💡 What This Project Demonstrates
 
-✔ Clean separation of concerns
+This project demonstrates practical frontend engineering skills that are directly applicable to real-world applications:
 
-✔ Realistic banking flows
+* **State management without frameworks** using a centralized global store (`state.js`)
+* **Clear separation of concerns** between UI, utilities, and business logic
+* **Defensive input validation** to prevent invalid or unsafe actions
+* **Predictable UI state control** through centralized section toggling
+* **Scalable architecture** that can easily support new features (filters, persistence, backend APIs)
 
-✔ State management without frameworks
-
-✔ Defensive input validation
-
-✔ Scalable file structure
-
-This project demonstrates **how the developer thinks**, not just how the UI looks.
+The focus of this project is not visual effects, but **correct data flow, logic clarity, and maintainability** - qualities expected in production code.
 
 ---
 
 ## 🔮 Future Improvements
 
-* Persist transactions using `localStorage`
-* Replace `alert()` with custom toast notifications
-* Add filters to transaction history
+* Add date-range filters to transaction history
+* Export transactions as CSV
 * Backend API integration
 
 ---
