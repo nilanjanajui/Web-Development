@@ -16,7 +16,7 @@ As I progress, this repository will expand to include **JavaScript** and more ad
 │   └── Practice files and small exercises for HTML and CSS
 │
 ├── projects/
-│   └── Complete projects, including the "Knowledge Vault" website
+│   └── Complete projects
 ```
 
 ---
