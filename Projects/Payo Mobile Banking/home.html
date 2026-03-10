@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Payoo | Home</title>
+        <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+
+        <!-- Tailwind + DaisyUI -->
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet">
+        <script
+            src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+        <!-- Font -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..900&display=swap"
+            rel="stylesheet">
+
+        <!-- Icons -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+        <style>
+        * {
+            font-family: "Outfit", sans-serif;
+        }
+    </style>
+    </head>
+
+    <body class="min-h-screen max-w-md mx-auto bg-base-200">
+
+        <!-- Header -->
+        <header class="sticky top-0 z-10 bg-base-200">
+            <div class="w-11/12 mx-auto py-4 flex justify-between items-center">
+
+                <div class="flex items-center gap-3">
+                    <img src="assets/logo.png" alt="Payoo logo" class="w-10">
+                    <div>
+                        <p class="text-sm text-neutral/60">Available Balance</p>
+                        <h2 class="text-2xl font-bold">
+                            $<span id="balance">45,000</span>
+                        </h2>
+                    </div>
+                </div>
+
+                <!-- Logout -->
+                <a href="index.html"
+                    class="btn btn-sm btn-ghost"
+                    aria-label="Log out">
+                    <i class="fa-solid fa-arrow-right-from-bracket"
+                        aria-hidden="true"></i>
+                </a>
+
+            </div>
+        </header>
+
+        <!-- Welcome -->
+        <section class="w-11/12 mx-auto mt-6">
+            <h1 class="text-3xl font-bold">
+                Welcome to Pay<span class="text-primary">oo</span>
+            </h1>
+            <p class="text-neutral/60 mt-1">
+                Simple, fast & secure mobile banking
+            </p>
+        </section>
+
+        <!-- Quick Actions -->
+        <section class="w-11/12 mx-auto mt-8">
+            <div class="grid grid-cols-3 gap-4">
+
+                <button onclick="showOnly('add-money')"
+                    class="card bg-base-100 shadow hover:shadow-md transition p-4 text-center"
+                    aria-label="Add money">
+                    <img src="assets/opt-1.png" alt="Add money"
+                        class="w-10 mx-auto mb-2">
+                    <p class="text-sm font-medium">Add Money</p>
+                </button>
+
+                <button onclick="showOnly('cashout')"
+                    class="card bg-base-100 shadow hover:shadow-md transition p-4 text-center"
+                    aria-label="Cash out money">
+                    <img src="assets/opt-2.png" alt="Cash out"
+                        class="w-10 mx-auto mb-2">
+                    <p class="text-sm font-medium">Cashout</p>
+                </button>
+
+                <div class="card bg-base-100 shadow p-4 text-center opacity-60">
+                    <img src="assets/opt-3.png" alt="Send money"
+                        class="w-10 mx-auto mb-2">
+                    <p class="text-sm">Send Money</p>
+                </div>
+
+                <div class="card bg-base-100 shadow p-4 text-center opacity-60">
+                    <img src="assets/opt-4.png" alt="Get bonus"
+                        class="w-10 mx-auto mb-2">
+                    <p class="text-sm">Bonus</p>
+                </div>
+
+                <div class="card bg-base-100 shadow p-4 text-center opacity-60">
+                    <img src="assets/opt-5.png" alt="Pay bills"
+                        class="w-10 mx-auto mb-2">
+                    <p class="text-sm">Pay Bill</p>
+                </div>
+
+                <button onclick="showHistory()"
+                    class="card bg-base-100 shadow hover:shadow-md transition p-4 text-center"
+                    aria-label="Transaction history">
+
+                    <div
+                        class="card bg-base-100 shadow p-4 text-center opacity-60">
+                        <img src="assets/opt-6.png" alt="Transaction history"
+                            class="w-10 mx-auto mb-2">
+                        <p class="text-sm">History</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Add Money -->
+            <section id="add-money" class="w-11/12 mx-auto mt-10 hidden">
+                <h2 class="text-xl font-semibold mb-4">Add Money</h2>
+
+                <div class="card bg-base-100 shadow rounded-2xl">
+                    <div class="card-body space-y-3">
+
+                        <label for="add-money-bank" class="sr-only">Select
+                            bank</label>
+                        <select id="add-money-bank"
+                            class="select bg-base-200 rounded-full">
+                            <option disabled selected>Select Bank</option>
+                            <option>DBBL</option>
+                            <option>IBBL</option>
+                            <option>City Bank</option>
+                        </select>
+
+                        <label for="add-money-number" class="sr-only">Bank
+                            account
+                            number</label>
+                        <input id="add-money-number"
+                            type="text"
+                            maxlength="11"
+                            class="input bg-base-200 rounded-full"
+                            placeholder="Bank account number">
+
+                        <label for="add-money-amount" class="sr-only">Amount to
+                            add</label>
+                        <input id="add-money-amount"
+                            type="number"
+                            class="input bg-base-200 rounded-full"
+                            placeholder="Amount">
+
+                        <label for="add-money-pin" class="sr-only">4 digit
+                            PIN</label>
+                        <input id="add-money-pin"
+                            type="password"
+                            maxlength="4"
+                            class="input bg-base-200 rounded-full"
+                            placeholder="4 digit PIN">
+
+                        <button id="add-money-btn"
+                            class="btn btn-primary rounded-full mt-2">
+                            Confirm Add Money
+                        </button>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cashout -->
+            <section id="cashout" class="w-11/12 mx-auto mt-10 hidden">
+                <h2 class="text-xl font-semibold mb-4">Cashout</h2>
+
+                <div class="card bg-base-100 shadow rounded-2xl">
+                    <div class="card-body space-y-3">
+
+                        <label for="cashout-number" class="sr-only">Agent
+                            number</label>
+                        <input id="cashout-number"
+                            type="text"
+                            maxlength="11"
+                            class="input bg-base-200 rounded-full"
+                            placeholder="Agent number">
+
+                        <label for="cashout-amount" class="sr-only">Cashout
+                            amount</label>
+                        <input id="cashout-amount"
+                            type="number"
+                            class="input bg-base-200 rounded-full"
+                            placeholder="Amount">
+
+                        <label for="cashout-pin" class="sr-only">4 digit
+                            PIN</label>
+                        <input id="cashout-pin"
+                            type="password"
+                            maxlength="4"
+                            class="input bg-base-200 rounded-full"
+                            placeholder="4 digit PIN">
+
+                        <button id="cashout-btn"
+                            class="btn btn-primary rounded-full mt-2">
+                            Confirm Cashout
+                        </button>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Transaction History -->
+            <section id="history" class="w-11/12 mx-auto mt-10 hidden">
+                <h2 class="text-xl font-semibold mb-4">Transaction History</h2>
+
+                <div id="history-list" class="space-y-3"></div>
+            </section>
+
+            <!-- Scripts -->
+            <script src="script/machine.js"></script>
+            <script src="script/state.js"></script>
+            <script src="script/history.js"></script>
+            <script src="script/addMoney.js"></script>
+            <script src="script/cashout.js"></script>
+
+        </body>
+    </html>

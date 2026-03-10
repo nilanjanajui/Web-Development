@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo | Secure Login</title>
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+
+    <!-- Tailwind + DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..900&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <style>
+        * {
+            font-family: "Outfit", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex items-center justify-center bg-linear-to-b from-base-200 to-base-300">
+
+    <main class="w-full max-w-md px-4">
+
+        <!-- Logo -->
+        <div class="flex justify-center mb-10">
+            <img src="assets/Logo-full.png" alt="Payoo Logo" class="w-44">
+        </div>
+
+        <!-- Card -->
+        <section class="card bg-base-100 shadow-xl rounded-3xl">
+            <div class="card-body">
+
+                <h1 class="text-2xl font-semibold text-center text-neutral mb-1">
+                    Welcome Back
+                </h1>
+                <p class="text-sm text-center text-gray-500 mb-6">
+                    Login securely to your Payoo account
+                </p>
+
+                <form class="space-y-4">
+
+                    <!-- Mobile Number -->
+                    <div>
+                        <label class="label font-medium text-neutral">
+                            Mobile Number
+                        </label>
+                        <div class="relative">
+                            <i class="fa-solid fa-phone absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                            <input
+                                id="input-number"
+                                type="text"
+                                inputmode="numeric"
+                                maxlength="11"
+                                minlength="11"
+                                placeholder="01XXXXXXXXX"
+                                class="input w-full pl-11 rounded-full bg-base-200 focus:outline-none focus:ring-2 focus:ring-primary"
+                            />
+                        </div>
+                    </div>
+
+                    <!-- PIN -->
+                    <div>
+                        <label class="label font-medium text-neutral">
+                            4 Digit PIN
+                        </label>
+                        <div class="relative">
+                            <i class="fa-solid fa-lock absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                            <input
+                                id="input-pin"
+                                type="password"
+                                maxlength="4"
+                                inputmode="numeric"
+                                placeholder="••••"
+                                class="input w-full pl-11 rounded-full bg-base-200 focus:outline-none focus:ring-2 focus:ring-primary"
+                            />
+                        </div>
+                    </div>
+
+                    <!-- Login Button -->
+                    <button
+                        id="login-btn"
+                        type="button"
+                        class="btn btn-primary w-full rounded-full mt-4 text-base tracking-wide shadow-md hover:shadow-lg transition-all">
+                        Login
+                    </button>
+
+                </form>
+
+                <!-- Footer -->
+                <p class="text-xs text-center text-gray-400 mt-6">
+                    © 2026 Payoo. All rights reserved.
+                </p>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script/login.js"></script>
+</body>
+
+</html>
