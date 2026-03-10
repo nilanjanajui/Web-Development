@@ -3,8 +3,6 @@
 Payoo is a **frontend-only mobile banking simulation** built with **HTML, Tailwind CSS, DaisyUI, and vanilla JavaScript**.
 The project focuses on **core frontend fundamentals** such as state management, input validation, DOM manipulation, and clean file separation — without using any frameworks or backend services.
 
-This project is designed to be **portfolio-ready** and easy to understand for reviewers and recruiters.
-
 ---
 
 ## 📂 Project Folder Structure
@@ -195,13 +193,6 @@ This project demonstrates **how the developer thinks**, not just how the UI look
 * Replace `alert()` with custom toast notifications
 * Add filters to transaction history
 * Backend API integration
-
----
-
-## 👤 Author
-
-**Payoo** – Frontend Mobile Banking Simulation
-Built as a JavaScript architecture & logic showcase.
 
 ---
 
