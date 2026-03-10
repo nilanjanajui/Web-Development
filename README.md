@@ -70,6 +70,13 @@ The project focuses on **core frontend fundamentals** such as state management, 
 **Live Demo:** [https://nilanjanajui.github.io/Payo-Mobile-Banking/](https://nilanjanajui.github.io/Payo-Mobile-Banking/)
 
 
+### 6. RoamRadar - Travel Guide
+
+RoamRadar is a responsive travel dashboard designed to help users explore destinations, check current weather, discover attractions, save favorites, and plan trips with AI assistance. It supports dark/light mode toggling, dynamic weather updates, and interactive maps powered by Leaflet. The app is built using Tailwind CSS, DaisyUI, Font Awesome, DOM manipulation, JavaScript core concepts, ES6, API fetching, and is fully mobile responsive.
+
+Check out the live demo here: [https://roamradar.netlify.app/](https://roamradar.netlify.app/)
+
+
 ---
 
 ## Objectives
