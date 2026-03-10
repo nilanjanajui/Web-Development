@@ -26,9 +26,8 @@ As I progress, this repository will expand to include **JavaScript** and more ad
 ### Current
 - HTML5  
 - CSS3  
-
-### Planned
-- JavaScript  
+- JavaScript
+- React
 
 ---
 
