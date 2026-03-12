@@ -108,7 +108,7 @@ https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=notifications
 1. Clone the repository
 
 ```
-git clone https://github.com/yourusername/github-issues-tracker.git
+git clone https://github.com/nilanjanajui/github-issues-tracker.git
 ```
 
 2. Open the project folder
