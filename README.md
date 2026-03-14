@@ -77,6 +77,13 @@ RoamRadar is a responsive travel dashboard designed to help users explore destin
 Check out the live demo here: [https://roamradar.netlify.app/](https://roamradar.netlify.app/)
 
 
+## 7. GitHub Issues Tracker
+
+A simple web application that displays and manages project issues similar to GitHub's issue dashboard. The app fetches issues from a public API and shows them in a clean card layout with filtering and search functionality.
+
+**Live Demo:** [https://github-issues-tracker-ph-a5.netlify.app/](https://github-issues-tracker-ph-a5.netlify.app/)
+
+
 ---
 
 ## Objectives
