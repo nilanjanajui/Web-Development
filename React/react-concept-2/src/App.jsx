@@ -1,121 +1,78 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
+import { useState } from 'react'
 
 function App() {
-  const [count, setCount] = useState(0)
+  // Local state used to show the result of each event.
+  const [clickCount, setClickCount] = useState(0)
+  const [typedText, setTypedText] = useState('')
+  const [name, setName] = useState('')
+  const [submittedName, setSubmittedName] = useState('')
+
+  // Runs when the button is clicked.
+  const handleButtonClick = () => {
+    setClickCount((prevCount) => prevCount + 1)
+  }
+
+  // Runs on every input value change and reads from event.target.value.
+  const handleTextChange = (event) => {
+    setTypedText(event.target.value)
+  }
+
+  // Keeps the form input controlled by React state.
+  const handleNameChange = (event) => {
+    setName(event.target.value)
+  }
+
+  // Prevents page reload, stores submitted value, then clears the field.
+  const handleFormSubmit = (event) => {
+    event.preventDefault()
+    setSubmittedName(name)
+    setName('')
+  }
 
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+      <h1>React Concept 2</h1>
 
-      <div className="ticks"></div>
+      {/* onClick triggers the handler when the button is pressed. */}
+      <h2>1) Click Event</h2>
+      <button id="btn" onClick={handleButtonClick}>Click me</button>
+      <p>Button clicked: {clickCount} times</p>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+      {/* onChange fires on each keystroke in this controlled input. */}
+      <h2>2) Change Event</h2>
+      <input
+        type="text"
+        placeholder="Type something..."
+        value={typedText}
+        onChange={handleTextChange}
+      />
+      <p>Current input value: {typedText || '(empty)'}</p>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+      {/* onSubmit fires when the form is submitted (button click or Enter). */}
+      <h2>3) Submit Event</h2>
+      <form onSubmit={handleFormSubmit}>
+        <input
+          type="text"
+          placeholder="Enter your name"
+          value={name}
+          onChange={handleNameChange}
+        />
+        <button type="submit">Submit</button>
+      </form>
+      <p>Submitted name: {submittedName || '(nothing submitted yet)'}</p>
+
     </>
   )
 }
+
+
+
+
+
+
+
+
+
 
 export default App
