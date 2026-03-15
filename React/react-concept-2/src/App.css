@@ -1,3 +1,42 @@
+.event-demo {
+  max-width: 700px;
+  margin: 24px auto;
+  padding: 20px;
+  border: 2px solid #d1d5db;
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+.event-input {
+  width: 100%;
+  max-width: 320px;
+  padding: 10px 12px;
+  margin: 8px 0;
+  border: 2px solid #9ca3af;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.event-btn {
+  padding: 10px 14px;
+  margin: 8px 0;
+  border: 2px solid #374151;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  cursor: pointer;
+}
+
+.event-form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 12px;
+  margin-top: 8px;
+  border: 2px dashed #cbd5e1;
+  border-radius: 10px;
+}
+
 .counter {
   font-size: 16px;
   padding: 5px 10px;
