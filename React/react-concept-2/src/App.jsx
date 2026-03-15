@@ -66,6 +66,13 @@ function App() {
 
   }, []) // empty array means run once
 
+  // the  destructuring is a method of extracting values from objects or arrays and assigning them to variables in a more concise way.
+  // In this case, we are extracting the 'title' and 'body' properties from the 'post' object and assigning them to variables with the same names.
+  // const { title, body } = post || {} 
+  // This line of code is using destructuring assignment to extract the 'title' and 'body' properties from the 'post' object. The 'post || {}' part is a fallback to ensure that if 'post' is null or undefined, it will default to an empty object, preventing errors when trying to access properties.
+
+  // console.log('API Data:', post)
+
 
   return (
     <>
