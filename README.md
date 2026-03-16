@@ -4,7 +4,7 @@ This repository represents my ongoing journey into web development, with a focus
 
 At this stage, I am learning **HTML** and **CSS**, emphasizing best practices for semantic markup, responsive layouts, and maintainable styling. As part of this process, I have developed a website called **Knowledge Vault**, which serves as a practical application of the concepts learned so far.
 
-As I progress, this repository will expand to include **JavaScript** and more advanced front-end development concepts.
+As I progress, this repository will expand to include **JavaScript** and **React** more advanced front-end development concepts.
 
 ---
 
