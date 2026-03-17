@@ -11,7 +11,7 @@ As I progress, this repository will expand to include **JavaScript** and **React
 ## Repository Structure
 
 ```
-.
+
 ├── practices/
 │   └── Practice files and small exercises for HTML and CSS
 │
