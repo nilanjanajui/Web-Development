@@ -26,7 +26,9 @@ As I progress, this repository will expand to include **JavaScript** and **React
 ### Current
 - HTML5  
 - CSS3  
-- JavaScript
+- JavaScript(ES6)
+- Tailwind CSS
+- DaisyUI
 - React
 
 ---
