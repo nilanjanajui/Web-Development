@@ -108,3 +108,6 @@ A simple web application that displays and manages project issues similar to Git
 ## License
 
 This repository is intended for learning and personal development purposes.
+
+
+
