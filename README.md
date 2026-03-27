@@ -1,113 +1,200 @@
 # Web Development Learning Repository
 
-This repository represents my ongoing journey into web development, with a focus on building a solid foundation through hands-on practice and structured projects.
+This repository represents my ongoing journey into **modern front-end web development**, built through continuous learning, experimentation, and project-based practice.
 
-At this stage, I am learning **HTML** and **CSS**, emphasizing best practices for semantic markup, responsive layouts, and maintainable styling. As part of this process, I have developed a website called **Knowledge Vault**, which serves as a practical application of the concepts learned so far.
+I have already completed the fundamentals of **HTML, CSS, and JavaScript**, and I am now focusing on **React** while building practical projects to strengthen my understanding of modern front-end architecture.
 
-As I progress, this repository will expand to include **JavaScript** and **React** more advanced front-end development concepts.
+The projects in this repository demonstrate my progress as I move from **static websites → dynamic JavaScript applications → component-based React development**.
 
 ---
 
 ## Repository Structure
 
 ```
-
 ├── practices/
-│   └── Practice files and small exercises for HTML and CSS
+│   └── Practice files and small exercises for HTML, CSS, and JavaScript
 │
 ├── projects/
-│   └── Complete projects
+│   └── Complete projects and real-world implementations
 ```
 
 ---
 
 ## Technologies
 
-### Current
-- HTML5  
-- CSS3  
-- JavaScript(ES6)
-- Tailwind CSS
-- DaisyUI
-- React
+### Core Skills
+
+* HTML5
+* CSS3
+* JavaScript (ES6)
+
+### Frameworks & Tools
+
+* React (currently learning)
+* Tailwind CSS
+* DaisyUI
+* REST APIs
+* Git & GitHub
 
 ---
 
 ## Projects
 
 ### 1. Knowledge Vault
-A static website built using HTML and CSS, designed to reinforce core web development concepts such as layout structure, styling, and content organization.
 
-Live Website Link:
-<a href="https://nilanjanajui.github.io/Assignment-01-Project-PH/" target="_blank" rel="noopener noreferrer">
-  https://nilanjanajui.github.io/Assignment-01-Project-PH/
-</a>
+A static website built using **HTML and CSS** to reinforce core web development concepts such as semantic structure, layout design, and styling fundamentals.
+
+**Live Website:**
+[https://nilanjanajui.github.io/Assignment-01-Project-PH/](https://nilanjanajui.github.io/Assignment-01-Project-PH/)
+
+---
 
 ### 2. Donate Today
 
-A simple, responsive donation-themed website built with **HTML** and **CSS**. This project focuses on clean layout, basic responsiveness, and a clear call-to-action for charitable donations.
+A simple, responsive **donation-themed website** built with HTML and CSS.
 
-**Live Demo:** [https://nilanjanajui.github.io/Donate-Today/](https://nilanjanajui.github.io/Donate-Today/)
+The project focuses on **clean layout design, responsiveness, and clear call-to-action UI elements**.
+
+**Live Demo:**
+[https://nilanjanajui.github.io/Donate-Today/](https://nilanjanajui.github.io/Donate-Today/)
+
+---
 
 ### 3. TechWave
 
-TechWave is a responsive podcast website built with HTML and CSS. It features a modern hero section, podcast highlights, episode listings, host information, and a visually rich footer. The layout is fully responsive across mobile, tablet, and desktop devices, with carefully designed breakpoints to ensure consistent spacing, readability, and visual balance on all screen sizes.
+A **responsive podcast website** built using HTML and CSS.
 
-**Live Demo:** [https://nilanjanajui.github.io/PH-Assignment-02-Project-TechWave/](https://nilanjanajui.github.io/PH-Assignment-02-Project-TechWave/)
+Features include:
 
+* Modern hero section
+* Podcast highlights
+* Episode listings
+* Host information
+* Fully responsive layout
+
+The design adapts smoothly across **mobile, tablet, and desktop devices** with carefully structured breakpoints.
+
+**Live Demo:**
+[https://nilanjanajui.github.io/PH-Assignment-02-Project-TechWave/](https://nilanjanajui.github.io/PH-Assignment-02-Project-TechWave/)
+
+---
 
 ### 4. Job Application Tracker
 
-A responsive Job Tracking web application that allows users to manage and monitor job applications efficiently.
-This project demonstrates dynamic UI rendering, state management, filtering logic, and responsive design using Vanilla JavaScript.
+A **job tracking web application** built with **Vanilla JavaScript**.
 
-**Live Demo:** [https://nilanjanajui.github.io/Job-Application-Tracker/](https://nilanjanajui.github.io/Job-Application-Tracker/)
+The application allows users to manage and monitor job applications efficiently.
 
+Key concepts demonstrated:
 
- ### 5. Payoo Mobile Banking Web App
+* Dynamic UI rendering
+* State management
+* Filtering and search logic
+* DOM manipulation
+* Responsive design
 
-Payoo is a **frontend-only mobile banking simulation** built with **HTML, Tailwind CSS, DaisyUI, and vanilla JavaScript**.
-The project focuses on **core frontend fundamentals** such as state management, input validation, DOM manipulation, and clean file separation - without using any frameworks or backend services.
+**Live Demo:**
+[https://nilanjanajui.github.io/Job-Application-Tracker/](https://nilanjanajui.github.io/Job-Application-Tracker/)
 
-**Live Demo:** [https://nilanjanajui.github.io/Payo-Mobile-Banking/](https://nilanjanajui.github.io/Payo-Mobile-Banking/)
+---
 
+### 5. Payoo Mobile Banking Web App
 
-### 6. RoamRadar - Travel Guide
+Payoo is a **frontend-only mobile banking simulation** built using:
 
-RoamRadar is a responsive travel dashboard designed to help users explore destinations, check current weather, discover attractions, save favorites, and plan trips with AI assistance. It supports dark/light mode toggling, dynamic weather updates, and interactive maps powered by Leaflet. The app is built using Tailwind CSS, DaisyUI, Font Awesome, DOM manipulation, JavaScript core concepts, ES6, API fetching, and is fully mobile responsive.
+* HTML
+* Tailwind CSS
+* DaisyUI
+* Vanilla JavaScript
 
-Check out the live demo here: [https://roamradar.netlify.app/](https://roamradar.netlify.app/)
+The project focuses on **core frontend fundamentals** such as:
 
+* State management
+* Input validation
+* DOM manipulation
+* Clean code organization
+* Component-style UI structure without frameworks
 
-## 7. GitHub Issues Tracker
+**Live Demo:**
+[https://nilanjanajui.github.io/Payo-Mobile-Banking/](https://nilanjanajui.github.io/Payo-Mobile-Banking/)
 
-A simple web application that displays and manages project issues similar to GitHub's issue dashboard. The app fetches issues from a public API and shows them in a clean card layout with filtering and search functionality.
+---
 
-**Live Demo:** [https://github-issues-tracker-ph-a5.netlify.app/](https://github-issues-tracker-ph-a5.netlify.app/)
+### 6. RoamRadar – Travel Guide Dashboard
 
+RoamRadar is a **responsive travel dashboard** that helps users explore destinations and plan trips.
+
+Key features include:
+
+* Destination exploration
+* Weather updates via API
+  n- Interactive maps using **Leaflet**
+* Save favorite places
+* Dark / light mode toggle
+* AI-assisted travel planning
+
+Technologies used:
+
+* Tailwind CSS
+* DaisyUI
+* JavaScript (ES6)
+* API Fetching
+* DOM Manipulation
+* Responsive Design
+
+**Live Demo:**
+[https://roamradar.netlify.app/](https://roamradar.netlify.app/)
+
+---
+
+### 7. GitHub Issues Tracker
+
+A **GitHub-style issue dashboard** that fetches and displays issues from a public API.
+
+Features include:
+
+* Issue cards layout
+* Search functionality
+* Issue filtering
+* API data fetching
+* Clean responsive UI
+
+**Live Demo:**
+[https://github-issues-tracker-ph-a5.netlify.app/](https://github-issues-tracker-ph-a5.netlify.app/)
+
+---
+
+## Current Focus
+
+I am currently focusing on:
+
+* Learning **React fundamentals**
+* Understanding **component-based architecture**
+* Managing **state and props**
+* Building **React-based projects**
+* Improving **frontend architecture and scalability**
 
 ---
 
 ## Objectives
 
-- Develop a strong foundation in front-end web development
-- Apply theoretical knowledge through real-world projects
-- Maintain organized, well-documented code
-- Track learning progress over time
+* Build a strong foundation in **modern front-end development**
+* Apply theoretical knowledge through **real-world projects**
+* Write **clean, maintainable, and scalable code**
+* Continuously improve through **hands-on development**
 
 ---
 
 ## Future Plans
 
-- Introduce JavaScript for interactivity and dynamic behavior
-- Improve existing projects with enhanced functionality
-- Explore modern front-end development tools and workflows
+* Build more projects using **React**
+* Learn **advanced React patterns**
+* Explore **Next.js**
+* Integrate **backend services and APIs**
+* Improve **UI/UX design and performance optimization**
 
 ---
 
 ## License
 
-This repository is intended for learning and personal development purposes.
-
-
-
+This repository is intended for **learning, experimentation, and personal development**.
