@@ -171,6 +171,14 @@ Features include:
 **Live Demo:**
 [https://github-issues-tracker-ph-a5.netlify.app/](https://github-issues-tracker-ph-a5.netlify.app/)
 
+
+### 8. DigiTools Buying Platform
+
+DigiTools is a responsive single-page application that simulates a digital product storefront. Users can explore a curated catalog of premium tools, add items to a cart, review their selections, and proceed to checkout - all within a clean, modern interface.
+
+
+**Live Demo:**
+ [https://digitool-platform2.netlify.app/](https://digitool-platform2.netlify.app/).
 ---
 
 ## Current Focus
