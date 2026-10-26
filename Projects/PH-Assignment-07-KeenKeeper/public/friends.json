@@ -1,0 +1,137 @@
+[
+    {
+        "id": 1,
+        "name": "Daniel Kim",
+        "picture": "https://randomuser.me/api/portraits/men/41.jpg",
+        "email": "daniel.kim@gmail.com",
+        "days_since_contact": 10,
+        "status": "on track",
+        "tags": [
+            "college",
+            "tech"
+        ],
+        "bio": "Met during a hackathon in college. We’ve collaborated on side projects ever since and still brainstorm startup ideas.",
+        "goal": 14,
+        "next_due_date": "2026-04-24"
+    },
+    {
+        "id": 2,
+        "name": "Hannah Scott",
+        "picture": "https://randomuser.me/api/portraits/women/39.jpg",
+        "email": "hannah.scott@yahoo.com",
+        "days_since_contact": 20,
+        "status": "almost due",
+        "tags": [
+            "work",
+            "design"
+        ],
+        "bio": "Worked together on multiple design projects. Always has sharp feedback and a great sense of aesthetics.",
+        "goal": 21,
+        "next_due_date": "2026-04-16"
+    },
+    {
+        "id": 3,
+        "name": "Liam Carter",
+        "picture": "https://randomuser.me/api/portraits/men/58.jpg",
+        "email": "liam.carter@gmail.com",
+        "days_since_contact": 40,
+        "status": "overdue",
+        "tags": [
+            "gym",
+            "fitness"
+        ],
+        "bio": "Gym partner who keeps me accountable. We used to train together every morning before work.",
+        "goal": 30,
+        "next_due_date": "2026-03-15"
+    },
+    {
+        "id": 4,
+        "name": "Sofia Alvarez",
+        "picture": "https://randomuser.me/api/portraits/women/63.jpg",
+        "email": "sofia.alvarez@gmail.com",
+        "days_since_contact": 7,
+        "status": "on track",
+        "tags": [
+            "travel",
+            "photography"
+        ],
+        "bio": "Met while traveling abroad. Shares stunning travel photos and always inspires my next trip.",
+        "goal": 14,
+        "next_due_date": "2026-04-21"
+    },
+    {
+        "id": 5,
+        "name": "Ethan Brooks",
+        "picture": "https://randomuser.me/api/portraits/men/11.jpg",
+        "email": "ethan.brooks@outlook.com",
+        "days_since_contact": 15,
+        "status": "almost due",
+        "tags": [
+            "school",
+            "music"
+        ],
+        "bio": "We were in the same school band. Still sends me new music recommendations regularly.",
+        "goal": 14,
+        "next_due_date": "2026-04-15"
+    },
+    {
+        "id": 6,
+        "name": "Maya Singh",
+        "picture": "https://randomuser.me/api/portraits/women/12.jpg",
+        "email": "maya.singh@gmail.com",
+        "days_since_contact": 2,
+        "status": "on track",
+        "tags": [
+            "neighbor",
+            "close friend"
+        ],
+        "bio": "Lives nearby and we often meet for evening walks. Easy to talk to about anything.",
+        "goal": 10,
+        "next_due_date": "2026-04-23"
+    },
+    {
+        "id": 7,
+        "name": "Noah Fischer",
+        "picture": "https://randomuser.me/api/portraits/men/29.jpg",
+        "email": "noah.fischer@yahoo.com",
+        "days_since_contact": 33,
+        "status": "overdue",
+        "tags": [
+            "work",
+            "startup"
+        ],
+        "bio": "Former coworker who left to start his own company. Always has interesting stories about entrepreneurship.",
+        "goal": 30,
+        "next_due_date": "2026-03-12"
+    },
+    {
+        "id": 8,
+        "name": "Isabella Rossi",
+        "picture": "https://randomuser.me/api/portraits/women/48.jpg",
+        "email": "isabella.rossi@gmail.com",
+        "days_since_contact": 9,
+        "status": "on track",
+        "tags": [
+            "art",
+            "creative"
+        ],
+        "bio": "Met at an art class. We occasionally collaborate on small creative projects for fun.",
+        "goal": 14,
+        "next_due_date": "2026-04-22"
+    },
+    {
+        "id": 9,
+        "name": "Jack Turner",
+        "picture": "https://randomuser.me/api/portraits/men/67.jpg",
+        "email": "jack.turner@hotmail.com",
+        "days_since_contact": 25,
+        "status": "almost due",
+        "tags": [
+            "sports",
+            "basketball"
+        ],
+        "bio": "We play basketball together on weekends. Competitive but always a good time.",
+        "goal": 21,
+        "next_due_date": "2026-04-19"
+    }
+]

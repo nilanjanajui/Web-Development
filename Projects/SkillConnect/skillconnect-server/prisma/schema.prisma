@@ -1,0 +1,242 @@
+// prisma/schema.prisma
+
+// ── Phase 0 decisions ──
+// 1. Booking stores startAt/endAt as UTC DateTime, not separate date+time strings.
+// 2. Availability is recurring weekly (dayOfWeek), not date-specific.
+// 3. User is never soft-deleted; UserStatus handles moderation. isDeleted only on
+//    ProviderProfile, Service, Category, Review.
+// 4. Review uniqueness is per-booking, not per (customer, service).
+// 5. ProviderProfile.isVerified added now, admin-controlled, default false.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ────────────── ENUMS ──────────────
+
+enum UserRole {
+  CUSTOMER
+  PROVIDER
+  ADMIN
+}
+
+enum UserStatus {
+  ACTIVE
+  SUSPENDED
+}
+
+enum ServiceStatus {
+  DRAFT
+  ACTIVE
+  INACTIVE
+}
+
+enum BookingStatus {
+  PENDING
+  CONFIRMED
+  REJECTED
+  COMPLETED
+  CANCELLED
+}
+
+enum PriceType {
+  FIXED
+  PER_HOUR
+  PER_DAY
+}
+
+enum DayOfWeek {
+  MONDAY
+  TUESDAY
+  WEDNESDAY
+  THURSDAY
+  FRIDAY
+  SATURDAY
+  SUNDAY
+}
+
+// ────────────── MODELS ──────────────
+
+model User {
+  id           String     @id @default(cuid())
+  fullName     String
+  email        String     @unique
+  passwordHash String
+  role         UserRole   @default(CUSTOMER)
+  status       UserStatus @default(ACTIVE)
+  phone        String?
+  bio          String?
+  profileImage String?
+
+  providerProfile ProviderProfile?
+  services        Service[]   @relation("ProviderServices") // convenience relation, see note below
+  bookings        Booking[]   @relation("CustomerBookings")
+  reviews         Review[]
+  wishlist        Wishlist[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([email])
+  @@index([role])
+  @@map("users")
+}
+
+model ProviderProfile {
+  id         String  @id @default(cuid())
+  userId     String  @unique
+  user       User    @relation(fields: [userId], references: [id])
+
+  headline   String?
+  skills     String[]
+  location   String?
+  experience String?
+  isVerified Boolean @default(false)
+  isDeleted  Boolean @default(false)
+
+  services     Service[]
+  availability Availability[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+  @@map("provider_profiles")
+}
+
+model Category {
+  id          String  @id @default(cuid())
+  name        String  @unique
+  description String?
+  icon        String?
+  isDeleted   Boolean @default(false)
+
+  services Service[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("categories")
+}
+
+model Service {
+  id          String        @id @default(cuid())
+  title       String
+  description String
+  price       Decimal       @db.Decimal(10, 2)
+  priceType   PriceType
+  status      ServiceStatus @default(DRAFT)
+  isDeleted   Boolean       @default(false)
+
+  // duration in minutes, used to compute Booking.endAt — required for PER_HOUR services,
+  // optional for FIXED/PER_DAY where a session isn't time-bound the same way
+  durationMinutes Int?
+
+  categoryId String
+  category   Category @relation(fields: [categoryId], references: [id])
+
+  providerId String
+  provider   User @relation("ProviderServices", fields: [providerId], references: [id])
+
+  providerProfileId String?
+  providerProfile   ProviderProfile? @relation(fields: [providerProfileId], references: [id])
+
+  bookings Booking[]
+  reviews  Review[]
+  wishlist Wishlist[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([providerId])
+  @@index([categoryId])
+  @@index([status])
+  @@index([price])
+  @@map("services")
+}
+
+model Availability {
+  id                String    @id @default(cuid())
+  providerProfileId String
+  providerProfile   ProviderProfile @relation(fields: [providerProfileId], references: [id])
+
+  dayOfWeek DayOfWeek
+  startTime String    // "HH:mm", 24h — stored as string since it's a recurring time-of-day, not a date
+  endTime   String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([providerProfileId])
+  @@map("availability")
+}
+
+model Booking {
+  id     String        @id @default(cuid())
+  status BookingStatus @default(PENDING)
+
+  customerId String
+  customer   User   @relation("CustomerBookings", fields: [customerId], references: [id])
+
+  serviceId String
+  service   Service @relation(fields: [serviceId], references: [id])
+
+  startAt DateTime // UTC — derived from client's bookingDate + startTime at creation
+  endAt   DateTime // UTC — derived from service.durationMinutes
+
+  notes String?
+
+  review Review?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([customerId])
+  @@index([serviceId])
+  @@index([status])
+  @@index([startAt])
+  @@map("bookings")
+}
+
+model Review {
+  id      String @id @default(cuid())
+  rating  Int    // enforce 1–5 at the application layer (Zod); Postgres CHECK optional add-on
+  comment String?
+
+  isDeleted Boolean @default(false)
+
+  bookingId String  @unique
+  booking   Booking @relation(fields: [bookingId], references: [id])
+
+  customerId String
+  customer   User   @relation(fields: [customerId], references: [id])
+
+  serviceId String
+  service   Service @relation(fields: [serviceId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([serviceId])
+  @@map("reviews")
+}
+
+model Wishlist {
+  id String @id @default(cuid())
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id])
+
+  serviceId String
+  service   Service @relation(fields: [serviceId], references: [id])
+
+  createdAt DateTime @default(now())
+
+  @@unique([userId, serviceId]) // prevents duplicate wishlist entries
+  @@map("wishlist")
+}

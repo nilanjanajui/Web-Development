@@ -1,0 +1,137 @@
+[
+    {
+        "id": 1,
+        "name": "AI Writing Pro",
+        "description": "Generate high-quality content, blogs, and marketing copy in seconds with advanced AI models.",
+        "price": 29,
+        "period": "monthly",
+        "tag": "Best Seller",
+        "tagType": "best-seller",
+        "features": [
+            "Unlimited generations",
+            "50+ writing templates",
+            "Grammar checker"
+        ],
+        "icon": "./products/writing.png"
+    },
+    {
+        "id": 2,
+        "name": "Design Templates Pack",
+        "description": "2000+ premium templates for social media, presentations, and marketing materials.",
+        "price": 49,
+        "period": "one-time",
+        "tag": "Popular",
+        "tagType": "popular",
+        "features": [
+            "2000+ templates",
+            "Monthly updates",
+            "Commercial license"
+        ],
+        "icon": "./products/design-tool.png"
+    },
+    {
+        "id": 3,
+        "name": "Premium Stock Assets",
+        "description": "Access millions of royalty-free photos, videos, and graphics for all your creative projects.",
+        "price": 19,
+        "period": "monthly",
+        "tag": "New",
+        "tagType": "new",
+        "features": [
+            "10M+ assets",
+            "Commercial use",
+            "No attribution required"
+        ],
+        "icon": "./products/camera.png"
+    },
+    {
+        "id": 4,
+        "name": "Automation Toolkit",
+        "description": "Automate repetitive tasks and streamline your entire workflow with powerful no-code tools.",
+        "price": 79,
+        "period": "monthly",
+        "tag": "Popular",
+        "tagType": "popular",
+        "features": [
+            "80+ automations",
+            "API access",
+            "Custom workflows"
+        ],
+        "icon": "./products/operation.png"
+    },
+    {
+        "id": 5,
+        "name": "Resume Builder Pro",
+        "description": "Create professional resumes and cover letters that pass ATS filters and land interviews.",
+        "price": 15,
+        "period": "one-time",
+        "tag": "New",
+        "tagType": "new",
+        "features": [
+            "100+ templates",
+            "ATS optimization",
+            "Export to PDF"
+        ],
+        "icon": "./products/portfolio.png"
+    },
+    {
+        "id": 6,
+        "name": "Social Media Content Kit",
+        "description": "Create compelling social media content to grow your brand across all major platforms.",
+        "price": 39,
+        "period": "monthly",
+        "tag": "Best Seller",
+        "tagType": "best-seller",
+        "features": [
+            "5000+ assets",
+            "Scheduler included",
+            "Analytics dashboard"
+        ],
+        "icon": "./products/social-media.png"
+    },
+    {
+        "id": 7,
+        "name": "SEO Master Suite",
+        "description": "Boost your search rankings with powerful keyword research, audits, and competitor tracking.",
+        "price": 59,
+        "period": "monthly",
+        "tag": "Popular",
+        "tagType": "popular",
+        "features": [
+            "Keyword tracker",
+            "Site audits",
+            "Competitor analysis"
+        ],
+        "icon": "./products/images.jpeg"
+    },
+    {
+        "id": 9,
+        "name": "Email Marketing Hub",
+        "description": "Design, automate, and track email campaigns that convert subscribers into loyal customers.",
+        "price": 25,
+        "period": "monthly",
+        "tag": "Best Seller",
+        "tagType": "best-seller",
+        "features": [
+            "Unlimited emails",
+            "A/B testing",
+            "Advanced analytics"
+        ],
+        "icon": "./products/email.png"
+    },
+    {
+        "id": 10,
+        "name": "Code Snippet Manager",
+        "description": "Organize, search, and share your code snippets across all devices and team members instantly.",
+        "price": 99,
+        "period": "yearly",
+        "tag": "New",
+        "tagType": "new",
+        "features": [
+            "Unlimited snippets",
+            "Team sharing",
+            "VS Code extension"
+        ],
+        "icon": "./products/code.png"
+    }
+]
